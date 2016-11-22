@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import win.ccav1.mod.response.TextMessage;
 import win.ccav1.tools.HanyuToPinyin;
 import win.ccav1.tools.MessageUtil;
+import win.ccav1.tools.TulingRobot;
 import win.ccav1.tools.weatherapi;
 
 /**
@@ -55,9 +56,12 @@ public class CoreService {
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
 //                String messge="FromUserName: "+fromUserName+"\n"+"toUserName: "+toUserName+"\n"+"" +
 //                        "msgType: "+msgType+"\n"+"content:"+content;
+                /*原来的天气查询
                 content= HanyuToPinyin.getPingYin(content);
                 String messge=weatherapi.getWeather(content);
-                respContent=messge;
+                */
+                //String messge=
+                respContent= TulingRobot.getJson(content,fromUserName);
             }
             // 图片消息
             else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {

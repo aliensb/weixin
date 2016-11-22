@@ -11,7 +11,7 @@
 <!--<p id="example" style="color: bisque;font-family: 'Arial',sans-serif;">-->
 <!--An example of a paragraph-->
 <!--</p>-->
-<p id="message">Whee!</p>
+<p id="message">Whee!1111</p>
 <input id="btn" value="move" onclick="moveMessage()"/>
 <script>
     window.onload = function(){
